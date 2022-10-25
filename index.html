@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo-container">
+				<img src="./images/logo.svg" alt="Snap logo" class="logo" />
+			</div>
+
+			<nav>
+				<button id="menuBtn" class="mobile-menu-controls">
+					<img
+						src="./images/icon-menu.svg"
+						alt="toggle menu"
+						id="toggle-menu"
+						class="toggle-menu"
+					/>
+				</button>
+				<div id="overlay" class="overlay"></div>
+				<div id="menu" class="menu">
+					<ul class="main-menu">
+						<li class="sub-menu">
+							Features
+							<img
+								src="./images/icon-arrow-down.svg"
+								alt=""
+								class="menu-arrow"
+							/>
+							<ul class="sub-menu-content" id="features">
+								<li>
+									<a href="#">
+										<img src="./images/icon-todo.svg" alt="" /> Todo List
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/icon-calendar.svg" alt="" /> Calendar
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/icon-reminders.svg" alt="" /> Reminders
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/icon-planning.svg" alt="" /> Planning
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="sub-menu">
+							Company
+							<img
+								src="./images/icon-arrow-down.svg"
+								alt=""
+								class="menu-arrow"
+							/>
+							<ul class="sub-menu-content" id="company">
+								<li><a href="#">History</a></li>
+								<li><a href="#">Our Team</a></li>
+								<li><a href="#">Blog</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+					<ul class="auth-menu">
+						<li id="login"><a href="#">Login</a></li>
+						<li id="register"><a href="#">Register</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<article class="hero-container">
+				<div class="hero-img-container">
+					<picture class="hero-img">
+						<source
+							srcset="./images/image-hero-desktop.png"
+							media="(min-width: 1440px)"
+						/>
+						<img src="./images/image-hero-mobile.png" alt="hero image" />
+					</picture>
+				</div>
+
+				<div class="hero-content">
+					<h1>Make remote work</h1>
+					<p>
+						Get your team in sync, no matter your location. Streamline
+						processes, create team rituals, and watch productivity soar.
+					</p>
+					<a href="#">Learn more</a>
+					<div class="clients">
+						<img src="./images/client-databiz.svg" alt="Databiz logo" /><img
+							src="./images/client-audiophile.svg"
+							alt="Audiophile logo"
+						/><img src="./images/client-meet.svg" alt="Meet logo" /><img
+							src="./images/client-maker.svg"
+							alt="Maker logo"
+						/>
+					</div>
+				</div>
+			</article>
+		</main>
+
+		<footer class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="https://www.akshaypatel.dev">Akshay Patel</a>.
+		</footer>
+
+		<script src="./app.js"></script>
+	</body>
+</html>
