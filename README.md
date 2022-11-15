@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/akshaypatel99/frontend-mentor/tree/main/intro-section-with-dropdown-navigation](https://github.com/akshaypatel99/frontend-mentor/tree/main/intro-section-with-dropdown-navigation)
+- Solution URL: [https://github.com/akshaypatel99/intro-section-with-dropdown-navigation](https://github.com/akshaypatel99/intro-section-with-dropdown-navigation)
 - Live Site URL: [https://akshaypatel99.github.io/intro-section-with-dropdown-navigation/](https://akshaypatel99.github.io/intro-section-with-dropdown-navigation/)
 
 ## My process
