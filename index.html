@@ -9,21 +9,19 @@
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+			href="./images/favicon-32x32.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
-			rel="stylesheet"
-		/>
+			rel="stylesheet" />
 		<link rel="stylesheet" href="./styles.css" />
 		<title>Frontend Mentor | Intro section with dropdown navigation</title>
 
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 		<style>
 			.attribution {
-				font-size: 11px;
+				font-size: 10px;
 				text-align: center;
 			}
 			.attribution a {
@@ -32,103 +30,144 @@
 		</style>
 	</head>
 	<body>
-		<header>
+		<header id="primary-header" class="primary-header" data-visible="false">
 			<div class="logo-container">
 				<img src="./images/logo.svg" alt="Snap logo" class="logo" />
 			</div>
 
-			<nav>
-				<button id="menuBtn" class="mobile-menu-controls">
-					<img
-						src="./images/icon-menu.svg"
-						alt="toggle menu"
-						id="toggle-menu"
-						class="toggle-menu"
-					/>
-				</button>
-				<div id="overlay" class="overlay"></div>
-				<div id="menu" class="menu">
-					<ul class="main-menu">
-						<li class="sub-menu">
+			<div id="overlay" class="overlay" data-visible="false"></div>
+
+			<button
+				id="menuBtn"
+				class="mobile-nav-toggle"
+				aria-controls="primary-navigation"
+				aria-expanded="false">
+				<span class="sr-only">Menu</span>
+			</button>
+			<nav
+				class="primary-navigation"
+				id="primary-navigation"
+				data-visible="false">
+				<ul class="main-menu" role="menu">
+					<li role="none">
+						<button
+							role="menuitem"
+							aria-controls="features"
+							aria-expanded="false"
+							class="sub-menu-btn">
 							Features
 							<img
 								src="./images/icon-arrow-down.svg"
 								alt=""
-								class="menu-arrow"
-							/>
-							<ul class="sub-menu-content" id="features">
-								<li>
-									<a href="#">
-										<img src="./images/icon-todo.svg" alt="" /> Todo List
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="./images/icon-calendar.svg" alt="" /> Calendar
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="./images/icon-reminders.svg" alt="" /> Reminders
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="./images/icon-planning.svg" alt="" /> Planning
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li class="sub-menu">
+								class="menu-arrow" />
+						</button>
+						<ul
+							class="sub-menu-content"
+							id="features"
+							role="menu"
+							class="sub-menu"
+							data-visible="false"
+							aria-label="Features">
+							<li role="none">
+								<a role="menuitem" href="#">
+									<img
+										src="./images/icon-todo.svg"
+										alt=""
+										aria-hidden="true"
+										class="features-icon" />
+									Todo List
+								</a>
+							</li>
+							<li role="none">
+								<a role="menuitem" href="#">
+									<img
+										src="./images/icon-calendar.svg"
+										alt=""
+										aria-hidden="true"
+										class="features-icon" />
+									Calendar
+								</a>
+							</li>
+							<li role="none">
+								<a role="menuitem" href="#">
+									<img
+										src="./images/icon-reminders.svg"
+										alt=""
+										aria-hidden="true"
+										class="features-icon" />
+									Reminders
+								</a>
+							</li>
+							<li role="none">
+								<a role="menuitem" href="#">
+									<img
+										src="./images/icon-planning.svg"
+										alt=""
+										aria-hidden="true"
+										class="features-icon" />
+									Planning
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li role="none">
+						<button
+							role="menuitem"
+							aria-controls="company"
+							aria-expanded="false"
+							class="sub-menu-btn">
 							Company
 							<img
 								src="./images/icon-arrow-down.svg"
 								alt=""
-								class="menu-arrow"
-							/>
-							<ul class="sub-menu-content" id="company">
-								<li><a href="#">History</a></li>
-								<li><a href="#">Our Team</a></li>
-								<li><a href="#">Blog</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Careers</a></li>
-						<li><a href="#">About</a></li>
-					</ul>
-					<ul class="auth-menu">
-						<li id="login"><a href="#">Login</a></li>
-						<li id="register"><a href="#">Register</a></li>
-					</ul>
-				</div>
+								class="menu-arrow" />
+						</button>
+						<ul
+							class="sub-menu-content"
+							id="company"
+							role="menu"
+							class="sub-menu"
+							data-visible="false"
+							aria-label="Company">
+							<li role="none"><a role="menuitem" href="#">History</a></li>
+							<li role="none"><a role="menuitem" href="#">Our Team</a></li>
+							<li role="none"><a role="menuitem" href="#">Blog</a></li>
+						</ul>
+					</li>
+					<li role="none"><a role="menuitem" href="#">Careers</a></li>
+					<li role="none"><a role="menuitem" href="#">About</a></li>
+				</ul>
+				<ul class="auth-menu" role="menu">
+					<li role="none" id="login">
+						<a role="menuitem" href="#">Login</a>
+					</li>
+					<li role="none" id="register">
+						<a role="menuitem" href="#">Register</a>
+					</li>
+				</ul>
 			</nav>
 		</header>
 		<main>
 			<article class="hero-container">
-				<div class="hero-img-container">
-					<picture class="hero-img">
-						<source
-							srcset="./images/image-hero-desktop.png"
-							media="(min-width: 1440px)"
-						/>
-						<img src="./images/image-hero-mobile.png" alt="hero image" />
-					</picture>
-				</div>
+				<picture class="hero-img">
+					<source
+						srcset="./images/image-hero-desktop.png"
+						media="(min-width: 1440px)" />
+					<img src="./images/image-hero-mobile.png" alt="hero image" />
+				</picture>
 
 				<div class="hero-content">
-					<h1>Make remote work</h1>
-					<p>
+					<h1 class="hero-heading">Make remote work</h1>
+					<p class="hero-text">
 						Get your team in sync, no matter your location. Streamline
 						processes, create team rituals, and watch productivity soar.
 					</p>
-					<a href="#">Learn more</a>
+					<a href="#" class="hero-link">Learn more</a>
 					<div class="clients">
-						<img src="./images/client-databiz.svg" alt="Databiz logo" /><img
-							src="./images/client-audiophile.svg"
-							alt="Audiophile logo"
-						/><img src="./images/client-meet.svg" alt="Meet logo" /><img
-							src="./images/client-maker.svg"
-							alt="Maker logo"
-						/>
+						<img src="./images/client-databiz.svg" alt="Databiz logo" />
+						<img src="./images/client-audiophile.svg" alt="Audiophile logo" />
+						<img src="./images/client-meet.svg" alt="Meet logo" />
+						<img src="./images/client-maker.svg" alt="Maker logo" />
 					</div>
 				</div>
 			</article>
